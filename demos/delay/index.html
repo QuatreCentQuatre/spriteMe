@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script src="../../vendor/jquery-1.9.1.min.js"></script>
+    <script src="../../src/spriteMe.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            this.spriteMe = new $me.SpriteMe($('#koopa1'),{width:238, height:66, frameWidth:34, frameHeight:66, totalFrame:7, loop:-1});
+            this.spriteMe.play();
+            this.spriteMe2 = new $me.SpriteMe($('#koopa-img'),{width:238, height:66, frameWidth:34, frameHeight:66, totalFrame:7, loop:-1});
+            this.spriteMe2.play();
+        });
+    </script>
+    <style>
+        #koopa1{width:34px; height:66px; background: url("img/koopa.png");}
+        #koopa2{width:34px; height:66px; overflow:hidden; position:relative;}
+        #koopa-img{position:absolute;}
+    </style>
+</head>
+<body>
+<div id="koopa1"></div>
+
+</body>
+<div id="koopa2">
+    <img id="koopa-img" src="img/koopa.png" alt=""/>
+</div>
+</body>
+</html>
