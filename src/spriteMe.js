@@ -47,10 +47,7 @@
 				return;
 			}
 			isBackgroundImg = !this.$el.is("img");
-			console.log(this.defaults.width);
-			console.log(this.defaults.frameWidth);
 			framePerLine = Math.floor(this.defaults.width / this.defaults.frameWidth);
-			console.log(framePerLine);
 			privateMethods.applyCss.call(this);
 		};
 
@@ -178,11 +175,8 @@
 		this._initialize($el);
 	};
 
-    if(!window.libsMe){
-        window.libsMe = {};
-    }
-	if(!window.$me){
-		window.$me = window.libsMe;
+	if(!window.Me){
+		window.Me = {};
 	}
-    window.libsMe.SpriteMe = SpriteMe;
+    window.Me.sprite = SpriteMe;
 }(jQuery, window, document));
